@@ -15,8 +15,7 @@ RUN pip3 install --no-cache-dir \
         scikit-image==0.13 \
         scikit-learn==0.18
 
-RUN apt update \
- && apt install \
+RUN pip3 install --no-cache-dir \
         tensorflow-gpu \
         keras
 

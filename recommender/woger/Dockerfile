@@ -6,4 +6,5 @@ RUN apk update \
 
 RUN pip3 install --no-cache-dir \
         pytest \
-	pytest-cov
+	pytest-cov \
+	pyfakefs

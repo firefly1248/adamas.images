@@ -6,7 +6,8 @@ RUN pip3 install --no-cache-dir \
         flask \
         python-dateutil \
         celery \
-        healthcheck
+        healthcheck \
+        woger
 
 RUN apk update \
  && apk add --virtual .build-deps \

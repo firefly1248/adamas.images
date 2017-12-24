@@ -1,13 +1,10 @@
 FROM python:3.6-alpine
 MAINTAINER Borodin Gregory <grihabor@mail.ru>
 
+ENV REQUIREMENTS /etc/requirements.txt
+COPY requirements.txt $REQUIREMENTS
 RUN pip3 install --no-cache-dir \
-        requests \
-        flask \
-        python-dateutil \
-        celery \
-        healthcheck \
-        woger
+        -r $REQUIREMENTS
 
 RUN apk update \
  && apk add --virtual .build-deps \
